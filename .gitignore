@@ -1,0 +1,9 @@
+/node_modules/
+/app/img/sprite/
+/dist/
+/Макеты/
+/.git/
+/app/css/
+/**/*.psd
+/**/Thumbs.db
+/**/*.DS_Store
