@@ -10,12 +10,12 @@ $(document).ready(function(){
       loop: true,
       nav: true,
       navText: ['<svg class="icon-svg icon-slider-arrow"><use xlink:href="#icon-svg-slider-arrow"></use></svg>', '<svg class="icon-svg icon-slider-arrow"><use xlink:href="#icon-svg-slider-arrow"></use></svg>'],
-  });
+    });
 
     $('.header__dropdown-visible').customScroll({
      vertical: true,
      horizontal: false
- });
+   });
 
     $(".info__question").owlCarousel({
       items:1,
@@ -25,7 +25,7 @@ $(document).ready(function(){
       loop: true,
       nav: false,
       animateOut: 'fadeOut',
-  });
+    });
 
 
     var owl = $('.info__question');
@@ -33,10 +33,10 @@ $(document).ready(function(){
 
     $('.slider__next').click(function() {
       owl.trigger('next.owl.carousel');
-  });
+    });
     $('.slider__prev').click(function() {
       owl.trigger('prev.owl.carousel', [300]);
-  });
+    });
 
     $(".video__slider").owlCarousel({
       items:1,
@@ -47,17 +47,17 @@ $(document).ready(function(){
       autoHeight:true,
       nav: false,
         // animateOut: 'fadeOut',
-    });
+      });
 
     var owl2 = $('.video__slider');
     owl.owlCarousel();
 
     $('.video__btn-right').click(function() {
       owl2.trigger('next.owl.carousel');
-  });
+    });
     $('.video__btn-left').click(function() {
       owl2.trigger('prev.owl.carousel', [300]);
-  });
+    });
 	// Инициализируем слайдер для превью товара
 	$(".single__slider").each(function(){
 		$(this).owlCarousel({
@@ -66,8 +66,8 @@ $(document).ready(function(){
 			nav: true,
 			loop: true,
 			nav: true,
-          navText: ['<svg class="icon-svg icon-slider-arrow"><use xlink:href="#icon-svg-slider-arrow"></use></svg>', '<svg class="icon-svg icon-slider-arrow"><use xlink:href="#icon-svg-slider-arrow"></use></svg>'],
-      });
+      navText: ['<svg class="icon-svg icon-slider-arrow"><use xlink:href="#icon-svg-slider-arrow"></use></svg>', '<svg class="icon-svg icon-slider-arrow"><use xlink:href="#icon-svg-slider-arrow"></use></svg>'],
+    });
 	});
 
     // 	// Инициализируем "быстрый просмотр" с помощью ajax
@@ -98,82 +98,82 @@ $(document).ready(function(){
 
     // Скролл к шапке в каталоге
     $('.autoscroll').on('click', function(e){
-        $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top }, 1000);
-        e.preventDefault();
+      $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top }, 1000);
+      e.preventDefault();
     });
 
     function imgSize(){
-        if ($(window).width() <= '980'){
-          var resizez = 754/469;
-          var resizez3 = 912/642;
-          $('.info__slider').height($('.info__slider').width() / resizez);
-          $('.info__slider .owl-item').height($('.info__slide').width() / resizez);
+      if ($(window).width() <= '980'){
+        var resizez = 754/469;
+        var resizez3 = 912/642;
+        $('.info__slider').height($('.info__slider').width() / resizez);
+        $('.info__slider .owl-item').height($('.info__slide').width() / resizez);
 
-          $('.video__block').height($('.video__block').width() / resizez3);
+        $('.video__block').height($('.video__block').width() / resizez3);
       } else {
-          return false;
+        return false;
       }
-  }
+    }
 
-  $(window).on('load resize',imgSize);
+    $(window).on('load resize',imgSize);
 
-  $(document).on('click', '.video__btn-play--3', function() {
-    var $video = $('#main-video-3'),
-    src = $video.attr('src');
+    $(document).on('click', '.video__btn-play--3', function() {
+      var $video = $('#main-video-3'),
+      src = $video.attr('src');
 
-    $video.attr('src', src + '&autoplay=1');
-    $( ".video__block-play--3" ).fadeOut( "slow", function() {
-      $( ".video__block-play--3" ).css({'display' : 'none'});
-  });
-});
+      $video.attr('src', src + '&autoplay=1');
+      $( ".video__block-play--3" ).fadeOut( "slow", function() {
+        $( ".video__block-play--3" ).css({'display' : 'none'});
+      });
+    });
 
-  $(document).on('click', '.video__btn-play--1', function() {
-    var $video = $('#main-video-1'),
-    src = $video.attr('src');
+    $(document).on('click', '.video__btn-play--1', function() {
+      var $video = $('#main-video-1'),
+      src = $video.attr('src');
 
-    $video.attr('src', src + '&autoplay=1');
-    $( ".video__block-play--1" ).fadeOut( "slow", function() {
-      $( ".video__block-play--1" ).css({'display' : 'none'});
-  });
-});
+      $video.attr('src', src + '&autoplay=1');
+      $( ".video__block-play--1" ).fadeOut( "slow", function() {
+        $( ".video__block-play--1" ).css({'display' : 'none'});
+      });
+    });
 
 
-  $(document).on('click', '.video__btn-play--2', function() {
-    var $video = $('#main-video-2'),
-    src = $video.attr('src');
+    $(document).on('click', '.video__btn-play--2', function() {
+      var $video = $('#main-video-2'),
+      src = $video.attr('src');
 
-    $video.attr('src', src + '&autoplay=1');
-    $( ".video__block-play--2" ).fadeOut( "slow", function() {
-      $( ".video__block-play--2" ).css({'display' : 'none'});
-  });
-});
+      $video.attr('src', src + '&autoplay=1');
+      $( ".video__block-play--2" ).fadeOut( "slow", function() {
+        $( ".video__block-play--2" ).css({'display' : 'none'});
+      });
+    });
 
-  $("#spinner")
+    $("#spinner")
   .spinner('delay', 200) //delay in ms
   .spinner('changed', function(e, newVal, oldVal) {
     // trigger lazed, depend on delay option.
-})
+  })
   .spinner('changing', function(e, newVal, oldVal) {
     // trigger immediately
-});
+  });
 
   $('.header__city--link-drop').mouseup(function(){
     if ($(".header__dropdown").hasClass("header__dropdown--hidden")) {
       $('.header__dropdown').removeClass("header__dropdown--hidden");
       $('.header__dropdown').css({"visibility" : "visible"});
-  } else {
+    } else {
       $('.header__dropdown').addClass("header__dropdown--hidden");
       $('.header__dropdown').css({"visibility" : "hidden"});
-  }
-});
+    }
+  });
 
 
   $("body").click(function (event) {
     if (($(event.target).closest(".header__dropdown").length === 0) && ($(event.target).closest(".header__city--link-drop").length === 0)) {
       $('.header__dropdown').addClass("header__dropdown--hidden");
       $('.header__dropdown').css({"visibility" : "hidden"});
-  }
-});
+    }
+  });
 
   $('.single__column--right').magnificPopup({
     delegate: 'a',
@@ -184,25 +184,93 @@ $(document).ready(function(){
       enabled: true,
       navigateByImgClick: true,
       preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-  },
-  image: {
+    },
+    image: {
       tError: '<a href="%url%">Изображение не может быть загружно.',
       titleSrc: function(item) {
         return item.el.attr('title');
+      }
     }
-}
-});
+  });
 
-$(".question__label").click(function(){
+  $(".question__label").click(function(){
     $(this).parent().find(".question__label").removeClass("question__label--selected");
     $(this).addClass('question__label--selected');
-});
+  });
 
 
-$(".question__btn--next").click(function(){
+  $(".question__btn--next").click(function(){
     $('.question').css({"display" : "none"});
     $(this).parent().next(".question").css({'display' : 'block'});
     // $(this).css({'display' : 'block'});
-});
+  });
+
+  $("#datepicker input").datepicker({
+    firstDay: 1,
+    dateFormat: "dd-mm-yy",
+    beforeShow: function (textbox, instance) {
+     var txtBoxOffset = $(this).offset();
+     var top = txtBoxOffset.top;
+     var left = txtBoxOffset.left;
+     var textBoxWidth = $(this).outerWidth();
+     console.log('top: ' + top + 'left: ' + left);
+     setTimeout(function () {
+       instance.dpDiv.css({
+                       top: top, //you can adjust this value accordingly
+                       left: left//show at the end of textBox
+                     });
+     }, 0);
+
+   }});
+
+  $(".radio input").change(function(){
+    $(this).parent().toggleClass('radio--active');
+    console.log('привет');
+    if($(this).parent().hasClass('radio--active')) {
+      console.log('Отмечено');
+      $(this).parent().find(".radio__btn").text("Нет");
+    } else {
+      console.log('Снято');
+      $(this).parent().find(".radio__btn").text("Да");
+    }
+  });
+
+  $(".rateYo").rateYo({
+    // spacing   : "5px",
+    fullStar: true,
+    starWidth: "19px",
+    rating: 5,
+    spacing: "6px",
+    multiColor: {
+      "startColor": "#00bcc9",
+      "endColor"  : "#00FF00"
+    }
+  });
+
+  $(".rateYo").click(function () {
+    var $rateYo = $(this).rateYo();
+    var rating = $rateYo.rateYo("rating");
+    $(this).parent().find("input").val(rating);
+  });
+
+  $(".question__btn--no").click(function(){
+    $('#question__work-with-work').css({"display" : "block"});
+    $('#question__btn-start').css({"display" : "flex"});
+  });
+
+  $(".question__btn--no").click(function(){
+    $('#question__work-with-work').css({"display" : "block"});
+    $('.question__city').css({"display" : "block"});
+    $('#question__btn-start').css({"display" : "flex"});
+    $(this).css({'display':'none'});
+    $('.question__btn--yes').css({"display" : "none"});
+  });
+  $(".question__btn--yes").click(function(){
+    $('#question__work-with-work').css({"display" : "block"});
+    $('.question__city').css({"display" : "block"});
+    $('#question__btn-start').css({"display" : "flex"});
+    $('.question__btn--no').css({"display" : "none"});
+    $(this).css({'display':'none'});
+  });
 
 });

@@ -46,11 +46,13 @@ gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 				'app/libs/jquery/dist/jquery.min.js',
 		// 'app/libs/localStorageSvg/storage.js',
+		'app/libs/jquery-ui-1.12.1/jquery-ui.min.js',
 		'app/libs/spinner/jquery.spinner.js',
 		'app/libs/scroll/custom-scroll.js',
 		'app/libs/popup/dist/jquery.magnific-popup.min.js',
 		'app/libs/carousel2/dist/owl.carousel.min.js',
 		'app/libs/mmenu/dist/jquery.mmenu.all.js',
+		'app/libs/rater/jquery.rateyo.min.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))

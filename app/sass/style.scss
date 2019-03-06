@@ -1812,7 +1812,7 @@ svg {
 }
 
 .question {
-    min-height: 450px;
+	min-height: 450px;
 	&__number {
 		color: $light;
 		font-size: 1.375em;
@@ -1949,6 +1949,24 @@ svg {
 		font-family: $font-ultra;
 		line-height: 1.2;
 		font-size: 1.500em;
+	}
+	&__city-discript {
+		font-size: 1.3em;
+		&--bottom {
+			font-size: 1.1em;
+		}
+	}
+	&__city {
+		line-height: 1.3em;
+		font-family: $font-bold;
+		font-size: 1.4em;
+		margin-bottom: 40px;
+		ul {
+			padding-left: 23px;
+		}
+		li {
+			margin-bottom: 8px;
+		}
 	}
 }
 
@@ -2755,5 +2773,302 @@ svg {
 			position: relative;
 			display: inline-block;
 		}
+	}
+}
+
+.ui-datepicker {
+	border: 2px solid $accent;
+	background-color: $light;
+	.ui-state-default {
+		text-align: center;
+		color: $dark;
+		transition: 0.3s all;
+		&:hover {
+			color: $light;
+			background-color: $accent;
+		}
+	}
+	.ui-datepicker-prev {
+		cursor: pointer;
+		span {
+			width: 0;
+			height: 0;
+			border-top: 8px solid transparent;
+			border-right: 20px solid $accent;
+			border-bottom: 8px solid transparent;
+		}
+		&:hover {
+			top: 2px !important;
+			left: 2px !important;
+			span {
+				border-right: 20px solid $dark;
+			}
+		}
+	}
+	.ui-datepicker-next {
+		cursor: pointer;
+		span {
+			width: 0;
+			height: 0;
+			border-top: 8px solid transparent;
+			border-left: 20px solid $accent;
+			border-bottom: 8px solid transparent;
+		}
+		&:hover {
+			top: 2px !important;
+			right: 2px !important;
+			span {
+				border-left: 20px solid $dark;
+			}
+		}
+	}
+}
+
+.form {
+	padding-bottom: 96px;
+	box-sizing: border-box;
+	&__h2 {
+		color: $accent;
+		line-height: 1em;
+		font-family: $font-ultra;
+		font-size: 3.125em;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+		letter-spacing: 0.02em;
+		@include r(1200) {
+			line-height: 1.2em;
+			font-size: 2.225em;
+			margin-bottom: 40px;
+		}
+		@include r(600) {
+			margin-top: 40px;
+		}
+	}
+	&__title {
+		line-height: 1.2;
+		font-size: 1.625em;
+		color: $accent;
+		font-family: $font-bold;
+		margin-bottom: 5px;
+	}
+	&__discript {
+		font-style: italic;
+		line-height: 1.4;
+		margin-bottom: 10px;
+		@include r(400) {
+			br {
+				display: none;
+			}
+		}
+	}
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	&__input {
+		width: calc(25% - 24px);
+		@include r(1000) {
+			width: calc(50% - 24px);
+		}
+		@include r(580) {
+			width: 100%;
+		}
+	}
+	&__ratings {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	&__rate {
+		width: calc(33% - 16px);
+		margin-bottom: 45px;
+		@include r(1150) {
+			width: calc(50% - 16px);
+		}
+		@include r(760) {
+			width: 100%;
+		}
+	}
+	&__radio {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		margin-bottom: 50px;
+		flex-wrap: wrap;
+		&-text {
+			color: $accent;
+			margin-right: 10px;
+		}
+	}
+	&__submit {
+		color: $light;
+		background-color: $accent;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 230px;
+		height: 50px;
+		cursor: pointer;
+		transition: 0.3s all;
+		&:hover {
+			background-color: $light;
+			color: $accent;
+			svg {
+				fill: $accent;
+			}
+		}
+		svg {
+			fill: $light;
+			width: 25px;
+			height: 25px;
+			margin-right: 17px;
+		}
+		span {
+			font-size: 1.375em;
+			font-family: $font-bold;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.input {
+	border-bottom: 1px dashed $accent;
+	margin-bottom: 25px;
+	position: relative;
+	&__title {
+		color: $accent;
+	}
+	input {
+		width: 100%;
+		font-family: $font-bold;
+		font-size: 1.125em;
+		border: none;
+		outline: none;
+		color: $dark;
+	}
+}
+
+.rate {
+	&--clean {
+		width: calc(33% - 16px);
+		height: 0px;
+	}
+	&__radio {
+		width: 100%;
+		display: flex;
+		margin-bottom: 7px;
+		overflow: hidden;
+		justify-content: space-between;
+		@include r(400) {
+			flex-direction: column;
+		}
+		&-text {
+			font-family: $font-bold;
+			margin-bottom: 10px;
+		}
+	}
+	&__textarea {
+		textarea {
+			box-sizing: border-box;
+			height: 150px;
+			width: 100%;
+			border: 1px solid $accent;
+			background: inherit;
+			resize: none;
+			outline: none;
+		}
+	}
+	&__textarea-title {
+		font-family: $font-bold;
+		margin-bottom: 4px;
+	}
+	&__ratings {
+		margin-bottom: 20px;
+	}
+	&__rating {
+		display: flex;
+		height: 45px;
+		align-items: center;
+		&-text {
+			font-family: $font-bold;
+			position: relative;
+			flex-shrink: 1;
+			line-height: 1.3em;
+			top: 3px;
+			@include r(400) {
+				font-size: 0.9em;
+			}
+		}
+		.rateYo {
+			margin-right: 12px;
+		}
+		input {
+			visibility: hidden;
+			height: 0px;
+			width: 0px;
+			opacity: 0;
+		}
+	}
+	.jq-ry-container {
+		padding: 0px;
+		svg {
+			width: 19px;
+			height: 19px;
+		}
+	}
+	.jq-ry-normal-group {
+
+	}
+	.jq-ry-rated-group {
+		svg {
+			fill: $accent !important;
+		}
+	}
+}
+
+.radio {
+	height: 30px;
+	width: 95px;
+	background-color: $dark;
+	position: relative;
+	border-radius: 100px;
+	flex-shrink: 0;
+	cursor: pointer;
+	transition: 0.3s all;
+	overflow: hidden;
+	&--active {
+		.radio__btn {
+			transform: translate(23px,0);
+			// left: auto;
+			// right: 0px;
+		}
+	}
+	input {
+		// display: none;
+		position: absolute;
+		top: -10px;
+		left: -10px;
+		z-index: 3;
+		opacity: 0;
+	}
+	&__btn {
+		display: flex;
+		position: absolute;
+		user-select: none;
+		top: 0px;
+		// right: auto;
+		// left: 0px;
+		transform: translate(0px,0);
+		bottom: 0px;
+		transition: 0.3s all;
+		background-color: $accent;
+		color: $light;
+		font-family: $font-bold;
+		align-items: center;
+		width: 72px;
+		border-radius: 100px;
+		justify-content: center;
 	}
 }
