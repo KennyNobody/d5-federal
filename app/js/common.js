@@ -266,7 +266,6 @@ $(document).ready(function(){
     $('.question__btn--yes').css({"display" : "none"});
   });
   $(".question__btn--yes").click(function(){
-    $('#question__work-with-work').css({"display" : "block"});
     $('.question__city').css({"display" : "block"});
     $('#question__btn-start').css({"display" : "flex"});
     $('.question__btn--no').css({"display" : "none"});
