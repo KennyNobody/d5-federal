@@ -7433,9 +7433,9 @@ svg {
 
 .about__text {
   font-family: fira_sansultra,Arial,sans-serif;
-  font-size: 1.475em;
+  font-size: 1.3em;
   line-height: 1.4em;
-  margin-bottom: 32px;
+  margin-bottom: 5px;
 }
 
 .question__input:checked+.question__icon .question__icon-center {
@@ -7555,6 +7555,13 @@ svg {
   margin-bottom: 40px;
 }
 
+.question__answer-yes {
+  line-height: 1.3em;
+  font-family: fira_sansbold,Arial,sans-serif;
+  font-size: 1.125em;
+  margin-bottom: 40px;
+}
+
 .question__btn {
   width: 266px;
   height: 50px;
@@ -7574,7 +7581,7 @@ svg {
   -o-transition: .3s all;
   transition: .3s all;
   color: #002d40;
-  font-size: 1.375em;
+  font-size: 22px;
   font-family: fira_sansbold,Arial,sans-serif;
   cursor: pointer;
 }
@@ -7600,6 +7607,16 @@ svg {
 .question__btn--no:hover {
   background-color: #ffeea8;
   border: 2px solid #ffeea8;
+}
+
+.question__btn-city-yes {
+  font-size: 22px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.question__btn-city-no {
+  font-size: 22px;
 }
 
 .question__result {
@@ -9511,7 +9528,7 @@ svg {
 
   .question__btn {
     height: 44px;
-    font-size: 1.2em;
+    font-size: 18em;
   }
 
   .question__btn--no {

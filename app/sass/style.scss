@@ -1792,9 +1792,9 @@ svg {
 	}
 	&__text {
 		font-family: $font-ultra;
-		font-size: 1.475em;
+		font-size: 1.3em;
 		line-height: 1.4em;
-		margin-bottom: 32px;
+		margin-bottom: 5px;
 		@include r(1200) {
 			flex-direction: column;
 		}
@@ -1893,6 +1893,12 @@ svg {
 		font-size: 1.125em;
 		margin-bottom: 40px;
 	}
+	&__answer-yes {
+		line-height: 1.3em;
+		font-family: $font-bold;
+		font-size: 1.125em;
+		margin-bottom: 40px;
+	}
 	&__btn {
 		width: 266px;
 		height: 50px;
@@ -1901,12 +1907,12 @@ svg {
 		align-items: center;
 		transition: 0.3s all;
 		color: $dark;
-		font-size: 1.375em;
+		font-size: 22px;
 		font-family: $font-bold;
 		cursor: pointer;
 		@include r(800) {
 			height: 44px;
-			font-size: 1.2em;
+			font-size: 18em;
 		}
 		&--yes {
 			border: 2px solid $accent2;
@@ -1935,6 +1941,14 @@ svg {
 				border: 2px solid $accent2;
 			}
 		}
+	}
+	&__btn-city-yes {
+		font-size: 22px;
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+	&__btn-city-no {
+		font-size: 22px;	
 	}
 	&__result {
 		margin-bottom: 30px;

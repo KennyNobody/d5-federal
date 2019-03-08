@@ -90,27 +90,30 @@
 			</section>
 			<section class="container about">
 				<h2 class="about__h2">Франшиза</h2>
-				<p class="about__text">
+				<p class="about__text hide-in-start">
 					Франшиза квиза «Держи Пять!» это динамично растущий
 					(по 4 новых города ежемесячно), высокомаржинальный бизнес (маржинальность >50%) с быстрой окупаемостью (от 4 до 6 месяцев).
 				</p>
 				<div class="test">
 					<div class="test__article question" style="display: block;">
-						<p class="question__info">
+						<p class="question__info hide-in-start">
 							С нами уже <span class="question__info--accent">23</span> города
 						</p>
-						<p class="question__h1">
-							Хочешь запустить нашу игру в своем городе?
+						<p class="question__h1 hide-in-start">
+							Хотите запустить нашу игру в своем городе?
 						</p>
 						<div class="question__btn question__btn--yes">Да</div>
 						<div class="question__btn question__btn--no">Нет, я лучше на дядю поработаю</div>
 						<p class="question__discript" id="question__work-with-work" style="display: none;">
 							Квиз «Держи Пять!» позволяет совмещать работу по проекту с основной занятостью! 
-							Предлагаем ответить на пять простых вопросов, после которых ты узнаешь, на сколько сможет увеличиться твой ежемесячный заработок.
+							Предлагаем ответить на пять простых вопросов, после которых вы узнаете, на сколько сможет увеличиться ваш ежемесячный заработок.
+						</p>
+						<p class="question__answer-yes" style="display: none;">
+							Тогда Держи Пять простых вопросов, ответит на которые, ты получишь от нас предварительный финансовый план работы по проекту.
 						</p>
 						<div class="question__city" style="display: none;">
 							<p class="question__city-discript">
-								Давай проверим, свободен ли твой город? 
+								Давай проверим, свободен ли ваш город? 
 							</p>
 							<ul>
 								<li>Название города</li>
@@ -129,18 +132,22 @@
 								<li>Название города</li>
 								<li>Название города</li>
 							</ul>
-							<p class="question__city-discript question__city-discript--bottom">
+							<div class="question__info">
+								<div class="btn-yellow question__btn question__btn-city-yes">Город свободен</div>
+								<div class="btn-yellow question__btn question__btn-city-no">Город занят</div>
+							</div>
+							<div class="btn-yellow question__btn" id="question__btn-start" style="display: none;">
+								Погнали!
+							</div>
+							<p class="question__city-discript question__city-discript--bottom" style="display: none;">
 								Ваш город занят?
 								Предлагаем присмотреть соседний свободный город и запустить проект в нем. <br><br>
-								Чтобы рассчитать твой финансовый план, ответь на пять простых вопросов.  
+								Чтобы рассчитать твой финансовый план, ответьте на пять простых вопросов.  
 
 							</p>
 						</div>
-						<div class="btn-yellow question__btn question__btn--next" id="question__btn-start" style="display: none;">
-							Погнали!
-						</div>
 					</div>
-					<div class="test__article question" style="display: none;">
+					<div class="test__article test__article--1 question" style="display: none;">
 						<p class="question__number">
 							Вопрос 1 из 5
 						</p>
@@ -148,7 +155,7 @@
 							Численность населения вашего города (по данным Википедии)?
 						</p>
 						<label class="question__label question__label--selected">
-							<input type="radio" class="question__input question__input" name="ask-1" checked>
+							<input type="radio" class="question__input question__input" name="ask-1" value="city-1" checked>
 							<div class="question__icon">
 								<div class="question__icon-center"></div>
 							</div>
@@ -157,7 +164,7 @@
 							</span>
 						</label>
 						<label class="question__label">
-							<input type="radio" class="question__input" name="ask-1">
+							<input type="radio" class="question__input" name="ask-1" value="city-2">
 							<div class="question__icon">
 								<div class="question__icon-center"></div>
 							</div>
@@ -166,7 +173,7 @@
 							</span>
 						</label>
 						<label class="question__label">
-							<input type="radio" class="question__input" name="ask-1">
+							<input type="radio" class="question__input" name="ask-1" value="city-3">
 							<div class="question__icon">
 								<div class="question__icon-center"></div>
 							</div>
@@ -175,7 +182,7 @@
 							</span>
 						</label>
 						<label class="question__label">
-							<input type="radio" class="question__input" name="ask-1">
+							<input type="radio" class="question__input" name="ask-1" value="city-4">
 							<div class="question__icon">
 								<div class="question__icon-center"></div>
 							</div>
@@ -184,7 +191,7 @@
 							</span>
 						</label>
 						<label class="question__label">
-							<input type="radio" class="question__input" name="ask-1">
+							<input type="radio" class="question__input" name="ask-1" value="city-5">
 							<div class="question__icon">
 								<div class="question__icon-center"></div>
 							</div>
@@ -196,7 +203,7 @@
 							Далее
 						</div>
 					</div>
-					<div class="test__article question" style="display: none;">
+					<div class="test__article test__article--2 question" style="display: none;">
 						<p class="question__number">
 							Вопрос 2 из 5
 						</p>
@@ -204,7 +211,7 @@
 							Сколько часов в день вы готовы уделять проекту «Держи Пять!»? 
 						</p>
 						<label class="question__label question__label--selected">
-							<input type="radio" class="question__input" name="ask-2" checked>
+							<input type="radio" class="question__input" name="ask-2" value="time1" checked>
 							<div class="question__icon">
 								<div class="question__icon-center"></div>
 							</div>
@@ -213,7 +220,7 @@
 							</span>
 						</label>
 						<label class="question__label">
-							<input type="radio" class="question__input" name="ask-2">
+							<input type="radio" class="question__input" name="ask-2" value="time2">
 							<div class="question__icon">
 								<div class="question__icon-center"></div>
 							</div>
@@ -222,7 +229,7 @@
 							</span>
 						</label>
 						<label class="question__label">
-							<input type="radio" class="question__input" name="ask-2">
+							<input type="radio" class="question__input" name="ask-2" value="time3">
 							<div class="question__icon">
 								<div class="question__icon-center"></div>
 							</div>
@@ -234,7 +241,7 @@
 							Далее
 						</div>
 					</div>	
-					<div class="test__article question" style="display: none;">
+					<div class="test__article test__article--3 question" style="display: none;">
 						<p class="question__number">
 							Вопрос 3 из 5
 						</p>
@@ -281,7 +288,7 @@
 							Далее
 						</div>
 					</div>	
-					<div class="test__article question" style="display: none;">
+					<div class="test__article test__article--4 question" style="display: none;">
 						<p class="question__number">
 							Вопрос 4 из 5
 						</p>
@@ -289,7 +296,7 @@
 							Есть ли опыт предпринимательской деятельности?
 						</p>
 						<label class="question__label question__label--selected">
-							<input type="radio" class="question__input" name="ask-4" value="Отлично" checked>
+							<input type="radio" class="question__input" name="ask-4" value="Отлично!" checked>
 							<div class="question__icon">
 								<div class="question__icon-center"></div>
 							</div>
@@ -298,7 +305,7 @@
 							</span>
 						</label>
 						<label class="question__label">
-							<input type="radio" class="question__input" name="ask-4" value="Хорошо">
+							<input type="radio" class="question__input" name="ask-4" value="Хорошо!">
 							<div class="question__icon">
 								<div class="question__icon-center"></div>
 							</div>
@@ -307,7 +314,7 @@
 							</span>
 						</label>
 						<label class="question__label">
-							<input type="radio" class="question__input" name="ask-4" value="Неплохо">
+							<input type="radio" class="question__input" name="ask-4" value="Неплохо!">
 							<div class="question__icon">
 								<div class="question__icon-center"></div>
 							</div>
@@ -359,19 +366,19 @@
 					</div>
 					<div class="test__article question question--result" style="display: none;">
 						<p class="question__h1">
-							Отлично! Мы уверены, что нам по пути и у тебя получится успешно реализовать наш проект в своем городе. 
+							<span></span> Мы уверены, что нам по пути и у вас получится успешно реализовать наш проект в своем городе. 
 						</p>
 						<div class="question__result">
 							<p class="question__result-text">
 								Предполагаемая ежемесячная выручка с проекта «Держи Пять!» составит
 							</p>
-							<span class="question__result-inner" id="question__result-inner-1">95 000</span><span class="question__result-inner"> руб. </span>
+							<span class="question__result-inner" id="question__result-inner-1"></span><span class="question__result-inner"> руб. </span>
 						</div>
 						<div class="question__result">
 							<p class="question__result-text">
 								Расчетная чистая прибыль в месяц
 							</p>
-							<span class="question__result-inner" id="question__result-inner-1">51 000</span><span class="question__result-inner"> руб.*</span>
+							<span class="question__result-inner" id="question__result-inner-2"></span><span class="question__result-inner"> руб.*</span>
 							<p class="question__result-discript">
 								*при учете проведения 2 игр в месяц 
 							</p>

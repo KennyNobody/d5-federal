@@ -198,13 +198,6 @@ $(document).ready(function(){
     $(this).addClass('question__label--selected');
   });
 
-
-  $(".question__btn--next").click(function(){
-    $('.question').css({"display" : "none"});
-    $(this).parent().next(".question").css({'display' : 'block'});
-    // $(this).css({'display' : 'block'});
-  });
-
   $("#datepicker input").datepicker({
     firstDay: 1,
     dateFormat: "dd-mm-yy",
@@ -239,7 +232,7 @@ $(document).ready(function(){
     // spacing   : "5px",
     fullStar: true,
     starWidth: "19px",
-    rating: 5,
+    rating: 0,
     spacing: "6px",
     multiColor: {
       "startColor": "#00bcc9",
@@ -256,20 +249,72 @@ $(document).ready(function(){
   $(".question__btn--no").click(function(){
     $('#question__work-with-work').css({"display" : "block"});
     $('#question__btn-start').css({"display" : "flex"});
+    $('.hide-in-start').css({"display" : "none"});
+    $('.question__btn--no').css({"display" : "none"});
+    $('.question__btn--yes').css({"display" : "none"});
+    $('.question__city').css({"display" : "block"});
+    $('.question__city-discript').css({"display" : "none"});
+    $('.question__city ul').css({"display" : "none"});
+    $('.question__info').css({"display" : "none"});
   });
 
-  $(".question__btn--no").click(function(){
-    $('#question__work-with-work').css({"display" : "block"});
-    $('.question__city').css({"display" : "block"});
-    $('#question__btn-start').css({"display" : "flex"});
-    $(this).css({'display':'none'});
-    $('.question__btn--yes').css({"display" : "none"});
-  });
   $(".question__btn--yes").click(function(){
     $('.question__city').css({"display" : "block"});
-    $('#question__btn-start').css({"display" : "flex"});
+    // $('#question__btn-start').css({"display" : "flex"});
     $('.question__btn--no').css({"display" : "none"});
     $(this).css({'display':'none'});
+    $('.hide-in-start').css({"display" : "none"});
   });
+
+  $(".question__btn-city-yes").click(function() {
+    $(".question__answer-yes").css({"display" : "block"});
+    $('.question__city-discript').css({"display" : "none"});
+    $('.question__city ul').css({"display" : "none"});
+    $('.question__info').css({"display" : "none"});
+    $('#question__btn-start').css({"display" : "flex"});
+  });
+
+  $(".question__btn-city-no").click(function() {
+    $("#question__work-with-work").css({"display" : "block"});
+    $('.question__city-discript').css({"display" : "none"});
+    $('.question__city ul').css({"display" : "none"});
+    $('.question__info').css({"display" : "none"});
+    $('#question__btn-start').css({"display" : "flex"});
+  });
+
+  $("#question__btn-start").click(function(){
+    $('.question').css({"display" : "none"});
+    $(this).parent().parent().next(".question").css({'display' : 'block'});
+  });
+
+  $(".question__btn--next").click(function(){
+    $('.question').css({"display" : "none"});
+    $(this).parent().next(".question").css({'display' : 'block'});
+    // $(this).css({'display' : 'block'});
+  });
+
+  $(".question__btn--final").click(function(){
+    var mainText = $('.test__article--4 input:checked').val();
+    var result1 = $('.test__article--1 input:checked').val();
+    var result2 = $('.test__article--2 input:checked').val();
+
+    $(".question__h1 span").text(mainText);
+    if(((result1 == "city-1") || (result1 == "city-2")) && (result2 == "time1")) {
+      $("#question__result-inner-1").text("35 000");
+      $("#question__result-inner-2").text("19 000");
+    } else if (((result1 == "city-1") && (result2 == "time2")) || ((result1 == "city-2") && (result2 == "time2")) || ((result1 == "city-3") || (result1 == "city-4")) && (result2 == "time1")) {
+      $("#question__result-inner-1").text("55 000");
+      $("#question__result-inner-2").text("30 000");
+    } else if (((result1 == "city-1") && (result2 == "time3")) || ((result1 == "city-2") && (result2 == "time3")) || ((result1 == "city-3") && (result2 == "time2")) || ((result1 == "city-4") && (result2 == "time3")) || ((result1 == "city-5") && (result2 == "time1"))) {
+      $("#question__result-inner-1").text("75 000");
+      $("#question__result-inner-2").text("41 000");
+    } else if (((result1 == "city-3") && (result2 == "time3")) || ((result1 == "city-4") && (result2 == "time3")) || ((result1 == "city-5") && (result2 == "time2"))) {
+      $("#question__result-inner-1").text("95 000");
+      $("#question__result-inner-2").text("51 000");
+    } else {
+      $("#question__result-inner-1").text("110 000");
+      $("#question__result-inner-2").text("60 000");
+    }
+  })
 
 });
