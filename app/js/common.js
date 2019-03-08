@@ -275,8 +275,9 @@ $(document).ready(function(){
   });
 
   $(".question__btn-city-no").click(function() {
-    $("#question__work-with-work").css({"display" : "block"});
+    $("#question__work-with-work").css({"display" : "none"});
     $('.question__city-discript').css({"display" : "none"});
+    $('.question__city-discript--bottom').css({"display" : "block"});
     $('.question__city ul').css({"display" : "none"});
     $('.question__info').css({"display" : "none"});
     $('#question__btn-start').css({"display" : "flex"});

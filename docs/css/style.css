@@ -7443,7 +7443,7 @@ svg {
 }
 
 .question {
-  min-height: 450px;
+  min-height: 350px;
 }
 
 .question__number {
@@ -7642,6 +7642,7 @@ svg {
 
 .question__city-discript--bottom {
   font-size: 1.1em;
+  margin-bottom: 30px;
 }
 
 .question__city {
@@ -9528,7 +9529,7 @@ svg {
 
   .question__btn {
     height: 44px;
-    font-size: 18em;
+    font-size: 18px;
   }
 
   .question__btn--no {

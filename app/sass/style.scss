@@ -1812,7 +1812,7 @@ svg {
 }
 
 .question {
-	min-height: 450px;
+	min-height: 350px;
 	&__number {
 		color: $light;
 		font-size: 1.375em;
@@ -1912,7 +1912,7 @@ svg {
 		cursor: pointer;
 		@include r(800) {
 			height: 44px;
-			font-size: 18em;
+			font-size: 18px;
 		}
 		&--yes {
 			border: 2px solid $accent2;
@@ -1968,6 +1968,7 @@ svg {
 		font-size: 1.3em;
 		&--bottom {
 			font-size: 1.1em;
+			margin-bottom: 30px;
 		}
 	}
 	&__city {
