@@ -7438,6 +7438,16 @@ svg {
   margin-bottom: 5px;
 }
 
+.about__text ul {
+  list-style-type: none;
+  font-family: fira_sansbold,Arial,sans-serif;
+  padding-left: 0;
+}
+
+.about__text li {
+  margin-bottom: 5px;
+}
+
 .question__input:checked+.question__icon .question__icon-center {
   opacity: 1;
 }
@@ -7722,7 +7732,28 @@ svg {
 }
 
 .write__btn {
+  width: 266px;
   border: none;
+  height: 50px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+  color: #002d40;
+  font-size: 22px;
+  font-family: fira_sansbold,Arial,sans-serif;
+  cursor: pointer;
 }
 
 .rating__h2 {
@@ -9547,6 +9578,11 @@ svg {
 
   .write__column {
     width: 100%;
+  }
+
+  .write__btn {
+    height: 44px;
+    font-size: 18px;
   }
 
   .game__columns {
