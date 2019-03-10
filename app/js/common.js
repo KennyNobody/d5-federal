@@ -102,6 +102,13 @@ $(document).ready(function(){
       e.preventDefault();
     });
 
+    $('.about .question__btn').on('click', function() {
+      var aboutTop = $('.header').height();
+      var bannerTop = $(".content__header-bg").height();
+      window.scrollTo(aboutTop + bannerTop, aboutTop + bannerTop);
+      // console.log($(this));
+    });
+
     function imgSize(){
       if ($(window).width() <= '980'){
         var resizez = 754/469;
@@ -276,7 +283,7 @@ $(document).ready(function(){
 
   $(".question__btn-city-no").click(function() {
     $("#question__work-with-work").css({"display" : "none"});
-    $('.question__city-discript').css({"display" : "none"});
+    // $('.question__city-discript').css({"display" : "none"});
     $('.question__city-discript--bottom').css({"display" : "block"});
     $('.question__city ul').css({"display" : "none"});
     $('.question__info').css({"display" : "none"});
@@ -299,7 +306,7 @@ $(document).ready(function(){
     var result1 = $('.test__article--1 input:checked').val();
     var result2 = $('.test__article--2 input:checked').val();
 
-    $(".question__h1 span").text(mainText);
+    $(".question__h1").text(mainText);
     if(((result1 == "city-1") || (result1 == "city-2")) && (result2 == "time1")) {
       $("#question__result-inner-1").text("35 000");
       $("#question__result-inner-2").text("19 000");

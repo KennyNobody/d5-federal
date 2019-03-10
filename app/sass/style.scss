@@ -1798,6 +1798,14 @@ svg {
 		@include r(1200) {
 			flex-direction: column;
 		}
+		ul {
+			list-style-type: none;
+			font-family: $font-bold;
+			padding-left: 0px;
+		}
+		li {
+			margin-bottom: 5px;
+		}
 	}
 }
 
@@ -2032,7 +2040,21 @@ svg {
 		margin-bottom: 4px;
 	}
 	&__btn {
+		width: 266px;
 		border: none;
+		height: 50px;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.3s all;
+		color: $dark;
+		font-size: 22px;
+		font-family: $font-bold;
+		cursor: pointer;
+		@include r(800) {
+			height: 44px;
+			font-size: 18px;
+		}
 	}
 }
 
