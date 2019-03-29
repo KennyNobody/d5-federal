@@ -223,17 +223,24 @@ $(document).ready(function(){
 
    }});
 
-  $(".radio input").change(function(){
+  $(".radio input[type='checkbox']").change(function(){
     $(this).parent().toggleClass('radio--active');
-    console.log('привет');
     if($(this).parent().hasClass('radio--active')) {
-      console.log('Отмечено');
+      $(this).parent().parent().find("input[type='text']").val("Нет");
       $(this).parent().find(".radio__btn").text("Нет");
     } else {
-      console.log('Снято');
+      $(this).parent().parent().find("input[type='text']").val("Да");
       $(this).parent().find(".radio__btn").text("Да");
     }
   });
+
+  if($(".radio input[type='checkbox']").parent().hasClass('radio--active')) {
+    $(this).parent().parent().find("input[type='text']").val("Нет");
+    $(this).parent().find(".radio__btn").text("Нет");
+  } else {
+    $(this).parent().parent().find("input[type='text']").val("Да");
+    $(this).parent().find(".radio__btn").text("Да");
+  }
 
   $(".rateYo").rateYo({
     // spacing   : "5px",
