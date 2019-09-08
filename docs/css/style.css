@@ -5719,6 +5719,11 @@ svg {
   height: 100%;
 }
 
+.header__dropdown-country {
+  margin-bottom: 8px;
+  color: #fff;
+}
+
 .header__dropdown {
   background-color: #002d40;
   position: absolute;

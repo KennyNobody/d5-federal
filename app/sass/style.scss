@@ -179,6 +179,10 @@ svg {
 		position: relative;
 		height: 100%;
 	}
+	&__dropdown-country {
+		margin-bottom: 8px;
+		color: $light;
+	}
 	&__dropdown {
 		background-color: $dark;
 		position: absolute;
