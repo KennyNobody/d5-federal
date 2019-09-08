@@ -5722,6 +5722,8 @@ svg {
 .header__dropdown-country {
   margin-bottom: 8px;
   color: #fff;
+  font-size: 1.25em;
+  text-transform: uppercase;
 }
 
 .header__dropdown {
