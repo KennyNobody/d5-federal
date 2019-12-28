@@ -3856,6 +3856,36 @@ svg {
 			}
 		}
 	}
+	&__peoples {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 70px;
+	}
+	&__card {
+		margin-bottom: 36px;
+		text-align: center;
+		margin-right: 140px;
+		@include r(1200) {
+			width: 33%;
+			margin-right: 0px;
+		}
+		@include r(600) {
+			width: 100%;
+		}
+		svg {
+			fill: $dark;
+			height: 114px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 120px;
+			margin-bottom: 10px;
+		}
+	}
+	&__discript {
+		color: $light;
+		font-size: 22px;
+		font-weight: bold;
+	}
 }
 
 .partners {
